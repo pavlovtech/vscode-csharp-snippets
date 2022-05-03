@@ -1,1 +1,1 @@
-# vscode-snippets
+# VSCode Snippets for C#

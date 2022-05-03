@@ -1,0 +1,127 @@
+{
+	"Console.WriteLine": {
+		"prefix": "console-write-line",
+		"body": [
+			"Console.WriteLine($\"${1:text}\");$0"
+		]
+	},
+	"Create new simple record": {
+		"prefix": "record",
+		"body": [
+			"public record ${1:RecordName}(string ${2:PropertyName});$0"
+		]
+	},
+	"Create a new recored based on the existing one": {
+		"prefix": "record-from-existing",
+		"body": [
+			"var ${1:newRecord} = ${2:oldRecordName} with { Prop = \"NewValue\" };$0"
+		]
+	},
+	"Create async enumerable": {
+		"prefix": "async-enumerable",
+		"body": [
+			"private static async IAsyncEnumerable<${1:string}> GetData()",
+			"{",
+			"\tforeach (var item in ${2:items})",
+			"\t\tyield return item;",
+			"}"
+		]
+	},
+	"Create concurrent dicionary": {
+		"prefix": "concurrent-dictionary",
+		"body": [
+			"ConcurrentDictionary<${1:string}, ${2:string}> ${2:dict} = new();$0"
+		]
+	},
+	"Create concurrent queue": {
+		"prefix": "concurrent-queue",
+		"body": [
+			"ConcurrentQueue<${1:string}> ${2:queue} { get; set; } = new();$0"
+		]
+	},
+	"Create concurrent stack": {
+		"prefix": "concurrent-queue",
+		"body": [
+			"ConcurrentStack<${1:string}> stack = new();$0"
+		]
+	},
+	"Create concurrent bag as class": {
+		"prefix": "concurrent-bag",
+		"body": [
+			"ConcurrentBag<${1:string}> bag = new();$0"
+		]
+	},
+
+	"Create concurrent dicionary as class property": {
+		"prefix": "concurrent-dictionary-as-class-prop",
+		"body": [
+			"public ConcurrentDictionary<${1:string}, ${2:string}> ConcurrentDictionary { get; set; } = new();$0"
+		]
+	},
+	"Create concurrent queue as class property": {
+		"prefix": "concurrent-queue-as-class-prop",
+		"body": [
+			"public ConcurrentQueue<${1:string}> ${1:queue} { get; set; } = new();$0"
+		]
+	},
+	"Create concurrent stack as class property": {
+		"prefix": "concurrent-queue-as-class-prop",
+		"body": [
+			"public ConcurrentStack<${1:string}> ${2:stack} { get; set; } = new();$0"
+		]
+	},
+	"Create concurrent bag as class property": {
+		"prefix": "concurrent-bag-as-class-prop",
+		"body": [
+			"public ConcurrentBag<${1:string}> ${2:bag} { get; set; } = new();$0"
+		]
+	},
+	"Create immutable queue": {
+		"prefix": "immutable-queue",
+		"body": [
+			"var ${1:queue} = ImmutableQueue.Create<${2:string}>();$0"
+		]
+	},
+	"Create immutable list": {
+		"prefix": "immutable-list",
+		"body": [
+			"var ${1:list} = ImmutableList.Create<${2:string}>();$0"
+		]
+	},
+	"Create immutable dictionary": {
+		"prefix": "immutable-dictionary",
+		"body": [
+			"var ${1:dict} = ImmutableDictionary.Create<${2:string}>();$0"
+		]
+	},
+	"Delete file": {
+		"prefix": "delete-file",
+		"body": [
+			"File.Delete(${1:filePath});$0"
+		]
+	},
+	"Save to file": {
+		"prefix": "save-file",
+		"body": [
+			"await File.AppendAllTextAsync($(1:filePath), \"$(2:content)\");$0"
+		]
+	},
+	"Join strings": {
+		"prefix": "join-strings",
+		"body": [
+			"var joined = string.Join(\",\", $(1:stringList));$0"
+		]
+	},
+	"Throw if null": {
+		"prefix": "throw-if-null",
+		"body": [
+			"ArgumentNullException.ThrowIfNull($(1:arg));$0"
+		]
+	},
+	"Log information": {
+		"prefix": "log-info",
+		"body": [
+			"logger.LogInformation(\"$(1:Message about) {arg}\", $(2:arg));$0"
+		]
+	}
+}
