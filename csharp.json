@@ -82,7 +82,7 @@
 		]
 	},
 	"Save to file": {
-		"prefix": "save-file",
+		"prefix": "file-save",
 		"body": [
 			"await File.AppendAllTextAsync(${1:filePath}, \"${2:content}\");$0"
 		]
